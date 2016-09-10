@@ -1,4 +1,7 @@
-package com.dreamweather.app;
+package com.dreamweather.app.activity;
+
+import com.dreamweather.app.R;
+import com.dreamweather.app.R.layout;
 
 import android.app.Activity;
 import android.os.Bundle;
