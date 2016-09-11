@@ -1,6 +1,7 @@
 package com.dreamweather.app.activity;
 
 import com.dreamweather.app.R;
+import com.dreamweather.app.service.AutoUpdateService;
 import com.dreamweather.app.util.HttpCallbackListener;
 import com.dreamweather.app.util.HttpUtil;
 import com.dreamweather.app.util.Utility;
@@ -140,6 +141,9 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);// 启动后台刷新服务
 	}
 
 	@Override
